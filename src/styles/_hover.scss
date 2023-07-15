@@ -1,0 +1,37 @@
+// Links
+@import "variables";
+%default {
+  display: inline-block;
+  position: relative;
+  color: $text;
+}
+%after-effect {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $text;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+%hover-effect {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+// buttons
+
+%button-hover-initial {
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+}
+
+%button-hover-start {
+  background: $text;
+  color: $content;
+  border: 2px solid $content;
+}

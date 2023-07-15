@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "GeneralSans-Variable";
+  src: url("../assets/fonts/GeneralSans-Variable.woff2") format("woff2"),
+    url("../assets/fonts/GeneralSans-Variable.woff") format("woff"),
+    url("../assets/fonts/GeneralSans-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Extralight";
+  src: url("../assets/fonts/GeneralSans-Extralight.woff2") format("woff2"),
+    url("../assets/fonts/GeneralSans-Extralight.woff") format("woff"),
+    url("../assets/fonts/GeneralSans-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Light";
+  src: url("../assets/fonts/GeneralSans-Light.woff2") format("woff2"),
+    url("../assets/fonts/GeneralSans-Light.woff") format("woff"),
+    url("../assets/fonts/GeneralSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Regular";
+  src: url("../assets/fonts/GeneralSans-Regular.woff2") format("woff2"),
+    url("../assets/fonts/GeneralSans-Regular.woff") format("woff"),
+    url("../assets/fonts/GeneralSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Medium";
+  src: url("../assets/fonts/GeneralSans-Medium.woff2") format("woff2"),
+    url("../assets/fonts/GeneralSans-Medium.woff") format("woff"),
+    url("../assets/fonts/GeneralSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Semibold";
+  src: url("../assets/fonts/GeneralSans-Semibold.woff2") format("woff2"),
+    url("../assets/fonts/GeneralSans-Semibold.woff") format("woff"),
+    url("../assets/fonts/GeneralSans-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Bold";
+  src: url("../assets/fonts/GeneralSans-Bold.woff2") format("woff2"),
+    url("../assets/fonts/GeneralSans-Bold.woff") format("woff"),
+    url("../assets/fonts/GeneralSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@mixin font-face($font-family, $font-weight, $font-style, $file-path) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$file-path}.woff2") format("woff2"),
+      url("#{$file-path}.woff") format("woff"),
+      url("#{$file-path}.ttf") format("truetype");
+    font-weight: $font-weight;
+    font-display: swap;
+    font-style: $font-style;
+  }
+}
+
+@mixin font-families() {
+  @include font-face(
+    "GeneralSans-Variable",
+    200 700,
+    normal,
+    "../assets/fonts/GeneralSans-Variable"
+  );
+  @include font-face(
+    "GeneralSans-Extralight",
+    200,
+    normal,
+    "../assets/fonts/GeneralSans-Extralight"
+  );
+  @include font-face(
+    "GeneralSans-Light",
+    300,
+    normal,
+    "../assets/fonts/GeneralSans-Light"
+  );
+  @include font-face(
+    "GeneralSans-Regular",
+    400,
+    normal,
+    "../assets/fonts/GeneralSans-Regular"
+  );
+  @include font-face(
+    "GeneralSans-Medium",
+    500,
+    normal,
+    "../assets/fonts/GeneralSans-Medium"
+  );
+  @include font-face(
+    "GeneralSans-Semibold",
+    600,
+    normal,
+    "../assets/fonts/GeneralSans-Semibold"
+  );
+  @include font-face(
+    "GeneralSans-Bold",
+    700,
+    normal,
+    "../assets/fonts/GeneralSans-Bold"
+  );
+}

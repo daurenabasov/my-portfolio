@@ -1,0 +1,59 @@
+@import "../../styles/variables";
+@import "../../styles/hover";
+#About {
+  max-width: 100%;
+  margin-top: 400px;
+  padding-bottom: 400px;
+
+  #container {
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+
+    .block {
+      display: flex;
+      gap: 40px;
+      position: absolute;
+      right: 0;
+      @media screen and (max-width:899px) {
+          flex-direction: column;
+      }
+      img {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      h3 {
+        span {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          color: $title;
+        }
+        p {
+          font-size: 1.125rem;
+          line-height: 28px;
+          color: $text;
+          @media screen and (max-width:582px) {
+              font-size: 1rem;
+              line-height: 20px;
+          }
+        }
+        .button {
+          background: none;
+          border: 2px solid $text;
+          color: $text;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+          border-radius: 40px;
+          @extend %button-hover-initial;
+        }
+        .button:hover {
+          @extend %button-hover-start;
+        }
+      }
+    }
+  }
+}

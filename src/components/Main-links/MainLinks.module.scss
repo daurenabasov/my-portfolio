@@ -1,0 +1,47 @@
+@import "../../styles/variables";
+@import "../../styles/hover";
+#MainLinks {
+  max-width: 100%;
+  margin-top: 400px;
+  margin-bottom: 400px;
+  position: relative;
+
+  #container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+
+    a,
+    span {
+      display: flex;
+      align-items: center;
+      color: $text;
+      @extend %default;
+    }
+    a::after,
+    span::after {
+      @extend %after-effect;
+    }
+    a:hover::after,
+    span:hover::after {
+      @extend %hover-effect;
+    }
+  }
+  .social {
+    position: fixed;
+    right: 0;
+    top: 100px;
+    background: $text;
+    width: 52px;
+    height: 171px;
+    display: block;
+    a {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      color: $content;
+      font-size: 30px;
+    }
+  }
+}

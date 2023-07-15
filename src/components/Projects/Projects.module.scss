@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+@import "../../styles/fonts";
+
+#Projects {
+  position: relative;
+  max-width: 100%;
+  #container {
+    max-width: 80%;
+    margin: 0 auto;
+    .project {
+      background: -webkit-linear-gradient($content, $title);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-top: 2px solid $title;
+      padding: 10% 0px;
+      font-size: 7.29vw;
+      line-height: 10hw;
+      text-transform: uppercase;
+      font-family: "GeneralSans-Medium", sans-serif;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        font-size: 1vw;
+
+        @media screen and (max-width: 800px) {
+          font-size: 3vw;
+        }
+      }
+    }
+    .project:last-child {
+      border-bottom: 2px solid $title;
+    }
+  }
+}
+

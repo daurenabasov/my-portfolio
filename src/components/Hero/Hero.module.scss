@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+#hero {
+  max-width: 100%;
+  #container {
+    max-width: 80%;
+    margin: 0 auto;
+    h1 {
+      color: $title;
+      line-height: 80px;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 6rem;
+      font-family: "GeneralSans-Semibold", sans-serif;
+      overflow: hidden;
+      @media screen and (max-width: 739px) {
+          font-size: 3rem;
+          line-height: 60px;
+      }
+    }
+    .cursor {
+      background-color: $text;
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+
+      @media screen and (max-width: 700px) {
+          display: none;
+      }
+    }
+    .city {
+      color: $text;
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import "../../styles/variables";
+@import "../../styles/hover";
+
+#footer {
+  margin-top: 10%;
+  max-width: 100%;
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+
+    .topFooter {
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width:881px) {
+        margin-top: 20rem;
+  }
+      span {
+        --tw-text-opacity: 1;
+        color: $title;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1rem;
+        text-transform: uppercase;
+      }
+      a {
+        --tw-text-opacity: 1;
+        color: $text;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+    
+      }
+    }
+    .bottomFooter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 200px;
+      .date {
+        display: flex;
+        gap: 20px;
+        color: $text;
+      }
+      .footerNav {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        text-transform: uppercase;
+
+        li > a {
+          color: $text;
+          position: relative;
+        }
+        a::after {
+          @extend %after-effect;
+        }
+        a:hover::after {
+          @extend %hover-effect;
+        }
+      }
+    }
+  }
+}
