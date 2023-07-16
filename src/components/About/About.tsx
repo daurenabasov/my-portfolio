@@ -1,10 +1,10 @@
 import myPhoto from "../../assets/images/my_photo.png";
-import s from "./About.module.scss";
 import { Button } from "../../ui/Button";
+import s from "./About.module.scss";
 
 const About = () => {
   return (
-    <section id={s.About}>
+    <section className={s.About} id="about">
       <div id={s.container}>
         <div className={s.block}>
           <img src={myPhoto} alt="img" />

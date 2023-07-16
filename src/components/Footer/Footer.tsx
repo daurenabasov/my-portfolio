@@ -27,7 +27,7 @@ const Footer = () => {
       <div id={s.container}>
         <div className={s.topFooter}>
           <span>(FORGOT TO MENTION)</span>
-          <a href="https://www.instagram.com/daurenkx/">
+          <a target="_blank" href="https://www.instagram.com/daurenkx/">
             SUBSCRIBE TO MY INSTAGRAM <Arrow />
           </a>
         </div>

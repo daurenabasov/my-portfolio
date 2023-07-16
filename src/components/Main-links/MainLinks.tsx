@@ -1,15 +1,8 @@
 import Arrow from "../../assets/images/arrow";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import s from "./MainLinks.module.scss";
 
 const MainLinks = () => {
-  const navigate = useNavigate();
-
-  const getAbout = () => {
-    navigate("/about");
-  };
-
   const leftLink = "Contacts";
   const centerLink = "Projects";
   const rightLink = "About";
@@ -50,7 +43,7 @@ const MainLinks = () => {
           <Arrow />
         </motion.a>
         <motion.a
-          href="#"
+          href="#projects"
           variants={sentence}
           initial="hidden"
           animate="visible"
@@ -62,11 +55,11 @@ const MainLinks = () => {
           ))}
           <Arrow />
         </motion.a>
-        <motion.span
+        <motion.a
+          href="#about"
           variants={sentence}
           initial="hidden"
           animate="visible"
-          onClick={getAbout}
         >
           {rightLink.split("").map((char, index) => (
             <motion.span key={char + "-" + index} variants={letter}>
@@ -74,7 +67,7 @@ const MainLinks = () => {
             </motion.span>
           ))}
           <Arrow />
-        </motion.span>
+        </motion.a>
       </div>
       <div className={s.social}>
         <div className={s.logo}>

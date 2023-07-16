@@ -4,6 +4,11 @@ import MainLinks from "../../components/Main-links/MainLinks";
 import Projects from "../../components/Projects/Projects";
 
 const HomePage = () => {
+
+
+
+
+
   return (
     <main>
       <Hero />

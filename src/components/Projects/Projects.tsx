@@ -35,7 +35,7 @@ const Projects = () => {
     },
   ];
   return (
-    <section id={s.Projects}>
+    <section className={s.Projects} id="projects">
       <ParallaxText baseVelocity={5}> My Projects</ParallaxText>
       <ParallaxText baseVelocity={-5}> My Projects</ParallaxText>
       <div id={s.container}>
