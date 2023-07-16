@@ -1,12 +1,19 @@
+import { motion } from "framer-motion";
 import myPhoto from "../../assets/images/my_photo.png";
 import { Button } from "../../ui/Button";
+
 import s from "./About.module.scss";
 
 const About = () => {
   return (
     <section className={s.About} id="about">
       <div id={s.container}>
-        <div className={s.block}>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className={s.block}
+        >
           <img src={myPhoto} alt="img" />
           <h3>
             <span>(ABOUT ME)</span>
@@ -23,7 +30,7 @@ const About = () => {
             </p>
             <Button className={s.button}>Let's talk</Button>
           </h3>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

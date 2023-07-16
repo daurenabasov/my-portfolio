@@ -10,7 +10,8 @@ export interface IMousePosition {
 export interface IProjects {
     name: string;
     year: number | string;
-    image?: string
+    image?: string;
+    link: string;
 }
 export interface ISocial {
     social: string;
