@@ -3,9 +3,8 @@
 
 #header {
   max-width: 100%;
-  height: 80px;
+  height: 100px;
   color: #fff;
-  margin-top: 40px;
 }
 
 #container {
@@ -14,7 +13,6 @@
   align-items: center;
   max-width: 80%;
   margin: 0 auto;
-
   span {
     @extend %default;
 

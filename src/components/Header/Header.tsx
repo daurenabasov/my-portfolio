@@ -12,19 +12,15 @@ const Header = () => {
   const [nav] = useState<INavigate[]>([
     {
       name: "Home",
-      path: "/",
+      path: "",
     },
     {
       name: "Skills",
-      path: "/skills",
+      path: "skills",
     },
     {
       name: "Experience",
-      path: "/experience",
-    },
-    {
-      name: "Contacts",
-      path: "/contacts",
+      path: "experience",
     },
   ]);
 
@@ -54,7 +50,7 @@ const Header = () => {
               <>
                 {nav.map(({ name, path }, id) => (
                   <li key={id}>
-                    <Link to={path}>{name}</Link>
+                    <a href={`#${path}`}>{name}</a>
                   </li>
                 ))}
               </>

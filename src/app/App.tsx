@@ -1,8 +1,9 @@
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
 import Layout from "./layout/Layout";
 import Loader from "../components/Loader/Loader";
+import ErrorBoundary from "../error/ErrorBoundary";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -10,12 +11,12 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    },1800);
+    }, 2000);
   }, []);
 
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loader />}>
+      <ErrorBoundary>
         {isLoading ? (
           <Loader />
         ) : (
@@ -23,7 +24,7 @@ const App = () => {
             <AppRoutes />
           </Layout>
         )}
-      </Suspense>
+      </ErrorBoundary>
     </BrowserRouter>
   );
 };

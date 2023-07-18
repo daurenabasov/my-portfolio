@@ -1,10 +1,17 @@
+import { useCallback } from "react";
 import { motion } from "framer-motion";
 import myPhoto from "../../assets/images/my_photo.png";
 import { Button } from "../../ui/Button";
-
+import { useNavigate } from "react-router-dom";
 import s from "./About.module.scss";
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const getContact = useCallback(() => {
+    navigate("/contacts");
+  }, []);
+
   return (
     <section className={s.About} id="about">
       <div id={s.container}>
@@ -28,7 +35,9 @@ const About = () => {
               people say 'I need that in my life!'. <br />
               My future goal is to become the best software engineer
             </p>
-            <Button className={s.button}>Let's talk</Button>
+            <Button onClick={getContact} className={s.button}>
+              Let's talk
+            </Button>
           </h3>
         </motion.div>
       </div>

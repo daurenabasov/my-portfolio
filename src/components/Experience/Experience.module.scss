@@ -1,0 +1,72 @@
+@import "../../styles/variables";
+
+.Experience {
+  max-width: 100%;
+  min-height: 2000px;
+  opacity: 1;
+  transition: all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s;
+  margin-top: 1000px;
+  margin-bottom: 1000px;
+  cursor: auto;
+
+  #container {
+    max-width: 80%;
+    margin: 0 auto;
+    h1 {
+      color: $title;
+      line-height: 80px;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 6rem;
+      font-family: "GeneralSans-Semibold", sans-serif;
+      overflow: hidden;
+      z-index: 100000;
+      text-align: center;
+    }
+    .companies_container {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      position: relative;
+    }
+    .companies {
+      max-width: 30%;
+
+      &:nth-child(even) {
+        position: absolute;
+        right: 0;
+        margin-bottom: 100px;
+      }
+      &:nth-child(4) {
+        bottom: 100px;
+      }
+    }
+  }
+}
+
+.Experience.active {
+  opacity: 1;
+  background-color: white;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor.default {
+  background-color: #000;
+}
+
+.cursor.text {
+  height: 150px;
+  width: 150px;
+  background-color: #000;
+  mix-blend-mode: difference;
+}
