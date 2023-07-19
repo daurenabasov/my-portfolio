@@ -56,6 +56,7 @@ const Experience: React.FC = () => {
     description: string;
     date: string;
   }
+  
 
   const companies: ICompanies[] = [
     {
