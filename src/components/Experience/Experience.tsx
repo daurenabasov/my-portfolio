@@ -37,6 +37,7 @@ const Experience: React.FC = () => {
   }, [isInView]);
 
   const [scrollY, setScrollY] = useState(-100);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,34 +61,34 @@ const Experience: React.FC = () => {
     {
       title: "Ailine company",
       description:
-        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi praesentium unde culpa impedit consequuntur recusandae labore hic eligendi enim! ",
+        "Ailine company - outsourcing company developing custom projects. Outsourcing company developing projects to order.",
       date: "06.2022-09.2022",
     },
     {
       title: "Light code",
       description:
-        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi praesentium unde culpa impedit consequuntur recusandae labore hic eligendi enim! ",
+        "Programming courses. Develop a CRM system for Bai-Tushum Bank in 4 months with our development team ",
 
       date: "09.2022-12.2022",
     },
     {
       title: "Codify academy",
       description:
-        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi praesentium unde culpa impedit consequuntur recusandae labore hic eligendi enim! ",
+        "Codify academy courses. He was the support of the senior mentor in the direction of Frontend. My duties included mentoring students, reviewing the code of their assignments, checking exams, helping with their projects. In addition to the position of those supporters, he was a mentor of teenagers at a bootcamp in the direction of Javascript. ",
 
       date: "11.2022-07.2023",
     },
     {
       title: "Uno.kg",
       description:
-        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi praesentium unde culpa impedit consequuntur recusandae labore hic eligendi enim! ",
+        "Startup Uno.kg. Developed a marketplace with NextJS stack, Typescript, Redux Toolkit,gitflow,also worked with atomic design architecture",
 
       date: "12.2022-03.2023",
     },
     {
       title: "Ask.inc",
       description:
-        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi praesentium unde culpa impedit consequuntur recusandae labore hic eligendi enim! ",
+        "Startup Ask.inc. Developed a marketplace, crm system,landing site, mobile application. Work according to the Scrum methodology, used the flow git. As part of the development, we used the FSD architecture, NextJS, Typescript, Redux Toolkit",
 
       date: "04.2022-now",
     },

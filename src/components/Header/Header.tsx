@@ -15,12 +15,12 @@ const Header = () => {
       path: "",
     },
     {
-      name: "Skills",
-      path: "skills",
-    },
-    {
       name: "Experience",
       path: "experience",
+    },
+    {
+      name: "Contacts",
+      path: "footer",
     },
   ]);
 

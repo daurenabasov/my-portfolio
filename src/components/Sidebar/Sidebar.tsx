@@ -19,22 +19,15 @@ const Sidebar: FC<SidebarProps> = ({ closeSidebar, active }) => {
       }, [closeSidebar]),
     },
     {
-      name: "Skills",
-      path: "/skills",
-      getClose: useCallback(() => {
-        closeSidebar();
-      }, [closeSidebar]),
-    },
-    {
       name: "Experience",
-      path: "/experience",
+      path: "experience",
       getClose: useCallback(() => {
         closeSidebar();
       }, [closeSidebar]),
     },
     {
       name: "Contacts",
-      path: "/contacts",
+      path: "contacts",
       getClose: useCallback(() => {
         closeSidebar();
       }, [closeSidebar]),
@@ -62,9 +55,9 @@ const Sidebar: FC<SidebarProps> = ({ closeSidebar, active }) => {
               whileInView={{ opacity: 1, top: 0 }}
               transition={{ duration: 1 }}
             >
-              <Link to={path} onClick={getClose}>
+              <a href={`#${path}`} onClick={getClose}>
                 {name}
-              </Link>
+              </a>
             </motion.li>
           ))}
         </ul>

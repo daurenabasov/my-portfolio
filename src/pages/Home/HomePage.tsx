@@ -3,7 +3,6 @@ import Experience from "../../components/Experience/Experience";
 import Hero from "../../components/Hero/Hero";
 import MainLinks from "../../components/Main-links/MainLinks";
 import Projects from "../../components/Projects/Projects";
-import Skills from "../../components/Skills/Skills";
 
 const HomePage = () => {
   return (
@@ -13,7 +12,6 @@ const HomePage = () => {
       <Projects />
       <About />
       <Experience />
-      <Skills />
     </main>
   );
 };
